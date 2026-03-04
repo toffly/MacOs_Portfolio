@@ -78,8 +78,8 @@ const Welcome = () => {
     const subtitleCleanup = setupTextHover(subtitleRef.current, "subtitle");
 
     return () => {
-      subtitleCleanup();
-      titleCleanup();
+      subtitleCleanup?.();
+      titleCleanup?.();
     };
   }, []);
 
