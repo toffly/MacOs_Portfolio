@@ -61,10 +61,15 @@ const Dock = () => {
     };
   }, []);
 
-  const toggleApp = (app) => {
+  const toggleApp = (app:{ id: string; canOpen: boolean }) => {
     if(!app.canOpen) return
 
     const window = windows[app.id]
+
+    if(!window) {
+      console.error(`Window not found for app : ${app.id}`)
+      return
+    }
 
     if(window.isOpen) {
       closeWindow(app.id)
@@ -72,7 +77,7 @@ const Dock = () => {
       openWindow(app.id)
     }
 
-    console.log(window)
+    console.log(windows)
   };
 
   return (

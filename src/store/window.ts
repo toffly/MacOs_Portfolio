@@ -1,29 +1,37 @@
 import { create } from "zustand";
 import { INITIAL_Z_INDEX, WINDOW_CONFIG } from "../constants";
+import { immer } from "zustand/middleware/immer";
 
-const useWindowStore = create()((set) => ({
-  windows: WINDOW_CONFIG,
-  nextZIndex: INITIAL_Z_INDEX + 1,
+const useWindowStore = create(
+  immer((set) => ({
+    windows: WINDOW_CONFIG,
+    nextZIndex: INITIAL_Z_INDEX + 1,
 
-  openWindow: (windowKey: string, data = null) => set((state) => {
-    const win = state.windows[windowKey]
-    win.isOpen = true
-    win.zindex = state.nextZindex
-    win.date = data ?? win.data
-    state.nextZindex++
-  }),
+    openWindow: (windowKey: number, data = null) =>
+      set((state) => {
+        const win = state.windows[windowKey];
+        if (!win) return;
+        win.isOpen = true;
+        win.zIndex = state.nextZIndex;
+        win.data = data ?? win.data;
+        state.nextZIndex++;
+      }),
 
-  closeWindow: (windowKey: string) => set((state) => {
-    const win = state.windows[windowKey]
-    win.isOpen = false
-    win.zindex = INITIAL_Z_INDEX
-    win.date = null
-  }),
+    closeWindow: (windowKey: number) =>
+      set((state) => {
+        const win = state.windows[windowKey];
+        if (!win) return;
+        win.isOpen = false;
+        win.zIndex = INITIAL_Z_INDEX;
+        win.data = null;
+      }),
 
-  focusWindow: (windowKey: string) => set((state) => {
-    const win = state.windows[windowKey]
-    win.zindex = state.nextZIndex++
-  })
-}));
+    focusWindow: (windowKey: number) =>
+      set((state) => {
+        const win = state.windows[windowKey];
+        win.zIndex = state.nextZIndex++;
+      }),
+  })),
+);
 
-export default useWindowStore
+export default useWindowStore;
