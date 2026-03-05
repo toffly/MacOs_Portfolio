@@ -14,7 +14,7 @@ const Terminal = () => {
       <div className="techstack">
         <p>
           <span className="font-bold">@Peerapat % </span>
-          show tect stack
+          show tech stack
         </p>
 
         <div className="label">
