@@ -6,7 +6,6 @@ import { dockApps } from "../constants";
 import { useGSAP } from "@gsap/react";
 import useWindowStore from "../store/window";
 
-
 const Dock = () => {
   const {openWindow, closeWindow, windows} = useWindowStore()
   const dockRef = useRef<HTMLHeadingElement | null>(null);
