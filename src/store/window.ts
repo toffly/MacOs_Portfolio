@@ -14,9 +14,9 @@ type WindowState = {
   windows: Record<number, WindowStateItem>;
   nextZIndex: number;
 
-  openWindow: (windowKey: number, data?: WindowData | null) => void;
-  closeWindow: (windowKey: number) => void;
-  focusWindow: (windowKey: number) => void;
+  openWindow: (windowKey: string | number, data?: WindowData | null) => void;
+  closeWindow: (windowKey: string | number) => void;
+  focusWindow: (windowKey: string | number) => void;
 };
 
 const useWindowStore = create<WindowState>()(
