@@ -77,25 +77,25 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
+    date: "October 23, 2024",
     title:
-      "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-    image: "/images/blog1.png",
-    link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+      "Animation library using JavaScript using GSAP",
+    image: "/images/gsap2_aero.png",
+    link: "https://gsap.com",
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
-    title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-    image: "/images/blog2.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    date: "February 11, 2009",
+    title: "The NoSQL database to store data in the type of JSON",
+    image: "/images/mongodb.svg",
+    link: "https://www.mongodb.com",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
-    title: "The Ultimate Guide to Mastering GSAP Animations",
-    image: "/images/blog3.png",
-    link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    date: "April 6, 2019",
+    title: "A small, fast, and scalable bearbones state management solution",
+    image: "/images/zustand-svg.svg",
+    link: "https://zustand-demo.pmnd.rs",
   },
 ];
 
