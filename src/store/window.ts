@@ -11,7 +11,7 @@ type WindowStateItem = {
 };
 
 type WindowState = {
-  windows: Record<number, WindowStateItem>;
+  windows: Record<string, WindowStateItem>;
   nextZIndex: number;
 
   openWindow: (windowKey: string | number, data?: WindowData | null) => void;
@@ -52,6 +52,7 @@ const useWindowStore = create<WindowState>()(
 
         win.zIndex = state.nextZIndex++;
       }),
+
   }))
 );
 

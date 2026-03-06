@@ -27,7 +27,7 @@ const Finder = () => {
       </div>
 
       <div className="bg-white flex h-full">
-        <div className="sidebar">
+        <div className="sidebar pb-20">
           <div>
             <h3>Favorites</h3>
             <ul>
@@ -73,7 +73,7 @@ const Finder = () => {
               onClick={() => openItem(item)}
             >
               <img src={item.icon} alt={item.name} />
-              <p>{item.name}</p>
+              <p className="w-30">{item.name}</p>
             </li>
           ))}
         </ul>
