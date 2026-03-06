@@ -199,8 +199,8 @@ export {
 
 const WORK_LOCATION = {
   id: 1,
-  type: "work",
-  name: "Work",
+  type: "project",
+  name: "My Projects",
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
