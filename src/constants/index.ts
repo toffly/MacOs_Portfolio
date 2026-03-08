@@ -130,6 +130,13 @@ const socials = [
     bg: "#05b6f6",
     link: "https://www.linkedin.com/in/peerapat-mapitak-a29358320/",
   },
+  {
+    id: 3,
+    text: "Line",
+    icon: "/icons/line-icon.png",
+    bg: "#06C755",
+    link: "https://line.me/ti/p/JkpsvuDUef",
+  },
 ];
 
 const photosLinks = [
